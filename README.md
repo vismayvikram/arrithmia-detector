@@ -76,10 +76,10 @@ Using softmax confidence with a 0.7 threshold on DS2 (earlier run, attention mod
 
 Browse DS2 beats or upload a raw ECG segment (360 Hz). The app shows the beat waveform, the predicted class, the model's confidence, and the cost of being wrong, and it flags low-confidence beats for review.
 
-![Confident beat](results/screenshot_normal.png)
+![Confident beat](/screenshot_normal.png)
 *A confident prediction.*
 
-![Flagged beat](results/screenshot_flagged.png)
+![Flagged beat](/screenshot_flagged.png)
 *A low-confidence beat flagged for manual review.*
 
 ---
@@ -94,14 +94,12 @@ python leakage_test.py # naive random split vs inter-patient split
 streamlit run app.py   # demo app
 ```
 
-`notebook.ipynb` has the original exploration, step by step.
 
 ---
 
 ## Project structure
 
 ```
-notebook.ipynb   exploration, leakage demo, baselines, training, evaluation
 data.py          load, filter, segment, split, cache to .npz
 models.py        Random Forest, plain CNN, wide CNN, CNN + attention
 train.py         trains all models, saves .pt and results csv
